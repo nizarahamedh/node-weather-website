@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title> About</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+<title>Example</title>
+<style>
+ 
+</style>
+<form class="myForm">
+  <div>
+  <label for="customer_name">Name </label>
+  <input type="text" name="customer_name" id="customer_name" required>
+  </div>
+  <div>
+  <label for="email_address">Email </label>
+  <input type="email" name="email_address" id="email_address">
+  </div>
+  <div>
+  <label for="comments">Comments</label>
+  <textarea name="comments" id="comments" maxlength="500"></textarea>
+  </div>
+  <div>
+  <button>Submit</button>
+  </div>
+</form>
+ <p>{{helpText}}</p>        
+    </div>    
+     {{>footer}}
+</body>
+</html>
