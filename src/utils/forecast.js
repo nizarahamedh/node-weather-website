@@ -16,9 +16,16 @@ const forecast = (latitude,longitude, callback) =>
            
         }
         else
-        {            
-            const data = body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain.'
+        { 
+            const highTemp = body.daily.data[0].temperatureHigh
+            const lowTemp = body.daily.data[0].temperatureLow
+            console.log('highTemp ',highTemp)
+            console.log('lowTemp ',lowTemp)           
+            const data = body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degress out. '+
+            'High Temperature is '+highTemp+' and Low Temperature is '+lowTemp+
+            '. There is a ' + body.currently.precipProbability + '% chance of rain.'
             console.log(data)
+            
             callback(undefined, data)
             
         }
