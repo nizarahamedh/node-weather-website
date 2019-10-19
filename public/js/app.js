@@ -44,7 +44,7 @@ weatherForm.addEventListener('submit', (e)=>{
         msg1.textContent= 'Searched without location'
         return console.log("Searched without location")
     }
-    const url = 'http://localhost:3000/weather?address='+location
+    const url = '/weather?address='+location
     fetch(url).then((response)=>{
         response.json() .then((data)=> {
         if(data.error)
